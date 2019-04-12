@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Bloghi304DBModelStoreContainer" CdmEntityContainer="Bloghi304DBEntities">
+    <EntitySetMapping Name="Etiketler">
+      <EntityTypeMapping TypeName="Bloghi304DBModel.Etiketler">
+        <MappingFragment StoreEntitySet="Etiketler">
+          <ScalarProperty Name="EtiketlerID" ColumnName="EtiketlerID" />
+          <ScalarProperty Name="EtiketAdi" ColumnName="EtiketAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategoriler">
+      <EntityTypeMapping TypeName="Bloghi304DBModel.Kategoriler">
+        <MappingFragment StoreEntitySet="Kategoriler">
+          <ScalarProperty Name="KategorilerID" ColumnName="KategorilerID" />
+          <ScalarProperty Name="KategoriAdi" ColumnName="KategoriAdi" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MakaleEtiketleri">
+      <EntityTypeMapping TypeName="Bloghi304DBModel.MakaleEtiketleri">
+        <MappingFragment StoreEntitySet="MakaleEtiketleri">
+          <ScalarProperty Name="MakaleID" ColumnName="MakaleID" />
+          <ScalarProperty Name="EtiketID" ColumnName="EtiketID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Makaleler">
+      <EntityTypeMapping TypeName="Bloghi304DBModel.Makaleler">
+        <MappingFragment StoreEntitySet="Makaleler">
+          <ScalarProperty Name="MakalelerID" ColumnName="MakalelerID" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="icerik" ColumnName="icerik" />
+          <ScalarProperty Name="EklenmeTarihi" ColumnName="EklenmeTarihi" />
+          <ScalarProperty Name="GoruntulenmeSayisi" ColumnName="GoruntulenmeSayisi" />
+          <ScalarProperty Name="GuncellenmeTarihi" ColumnName="GuncellenmeTarihi" />
+          <ScalarProperty Name="BegenmeSayisi" ColumnName="BegenmeSayisi" />
+          <ScalarProperty Name="YazarID" ColumnName="YazarID" />
+          <ScalarProperty Name="KategoriID" ColumnName="KategoriID" />
+          <ScalarProperty Name="Aktifmi" ColumnName="Aktifmi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Resimler">
+      <EntityTypeMapping TypeName="Bloghi304DBModel.Resimler">
+        <MappingFragment StoreEntitySet="Resimler">
+          <ScalarProperty Name="ResimlerID" ColumnName="ResimlerID" />
+          <ScalarProperty Name="KucukBoyut" ColumnName="KucukBoyut" />
+          <ScalarProperty Name="OrtaBoyut" ColumnName="OrtaBoyut" />
+          <ScalarProperty Name="BuyukBoyut" ColumnName="BuyukBoyut" />
+          <ScalarProperty Name="Video" ColumnName="Video" />
+          <ScalarProperty Name="MakaleID" ColumnName="MakaleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uyeler">
+      <EntityTypeMapping TypeName="Bloghi304DBModel.Uyeler">
+        <MappingFragment StoreEntitySet="Uyeler">
+          <ScalarProperty Name="UyelerID" ColumnName="UyelerID" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="Soyadi" ColumnName="Soyadi" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Kullanicisifresi" ColumnName="Kullanicisifresi" />
+          <ScalarProperty Name="MailAdres" ColumnName="MailAdres" />
+          <ScalarProperty Name="DogumTarihi" ColumnName="DogumTarihi" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="Yazarmi" ColumnName="Yazarmi" />
+          <ScalarProperty Name="YetkiID" ColumnName="YetkiID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yetkiler">
+      <EntityTypeMapping TypeName="Bloghi304DBModel.Yetkiler">
+        <MappingFragment StoreEntitySet="Yetkiler">
+          <ScalarProperty Name="YetkilerID" ColumnName="YetkilerID" />
+          <ScalarProperty Name="YetkiAdi" ColumnName="YetkiAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yorumlar">
+      <EntityTypeMapping TypeName="Bloghi304DBModel.Yorumlar">
+        <MappingFragment StoreEntitySet="Yorumlar">
+          <ScalarProperty Name="YorumlarID" ColumnName="YorumlarID" />
+          <ScalarProperty Name="YorumBaslik" ColumnName="YorumBaslik" />
+          <ScalarProperty Name="Yorumicerik" ColumnName="Yorumicerik" />
+          <ScalarProperty Name="YorumTarihi" ColumnName="YorumTarihi" />
+          <ScalarProperty Name="UyeID" ColumnName="UyeID" />
+          <ScalarProperty Name="BegenmeSayisi" ColumnName="BegenmeSayisi" />
+          <ScalarProperty Name="MakaleID" ColumnName="MakaleID" />
+          <ScalarProperty Name="Aktifmi" ColumnName="Aktifmi" />
+          <ScalarProperty Name="GuncellemeTarihi" ColumnName="GuncellemeTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

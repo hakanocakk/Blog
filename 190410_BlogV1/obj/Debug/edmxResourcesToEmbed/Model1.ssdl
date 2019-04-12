@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Bloghi304DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Etiketler">
+    <Key>
+      <PropertyRef Name="EtiketlerID" />
+    </Key>
+    <Property Name="EtiketlerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EtiketAdi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Kategoriler">
+    <Key>
+      <PropertyRef Name="KategorilerID" />
+    </Key>
+    <Property Name="KategorilerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KategoriAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Aciklama" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="MakaleEtiketleri">
+    <Key>
+      <PropertyRef Name="MakaleID" />
+      <PropertyRef Name="EtiketID" />
+    </Key>
+    <Property Name="MakaleID" Type="int" Nullable="false" />
+    <Property Name="EtiketID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Makaleler">
+    <Key>
+      <PropertyRef Name="MakalelerID" />
+    </Key>
+    <Property Name="MakalelerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Baslik" Type="nvarchar" MaxLength="50" />
+    <Property Name="icerik" Type="nvarchar(max)" />
+    <Property Name="EklenmeTarihi" Type="date" />
+    <Property Name="GoruntulenmeSayisi" Type="int" />
+    <Property Name="GuncellenmeTarihi" Type="date" />
+    <Property Name="BegenmeSayisi" Type="int" />
+    <Property Name="YazarID" Type="int" />
+    <Property Name="KategoriID" Type="int" />
+    <Property Name="Aktifmi" Type="bit" />
+  </EntityType>
+  <EntityType Name="Resimler">
+    <Key>
+      <PropertyRef Name="ResimlerID" />
+    </Key>
+    <Property Name="ResimlerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KucukBoyut" Type="nvarchar(max)" />
+    <Property Name="OrtaBoyut" Type="nvarchar(max)" />
+    <Property Name="BuyukBoyut" Type="nvarchar(max)" />
+    <Property Name="Video" Type="nvarchar(max)" />
+    <Property Name="MakaleID" Type="int" />
+  </EntityType>
+  <EntityType Name="Uyeler">
+    <Key>
+      <PropertyRef Name="UyelerID" />
+    </Key>
+    <Property Name="UyelerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Adi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Soyadi" Type="nvarchar" MaxLength="50" />
+    <Property Name="KullaniciAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="Kullanicisifresi" Type="nvarchar" MaxLength="50" />
+    <Property Name="MailAdres" Type="nvarchar" MaxLength="50" />
+    <Property Name="DogumTarihi" Type="date" />
+    <Property Name="KayitTarihi" Type="date" />
+    <Property Name="Yazarmi" Type="bit" />
+    <Property Name="YetkiID" Type="int" />
+  </EntityType>
+  <EntityType Name="Yetkiler">
+    <Key>
+      <PropertyRef Name="YetkilerID" />
+    </Key>
+    <Property Name="YetkilerID" Type="int" Nullable="false" />
+    <Property Name="YetkiAdi" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Yorumlar">
+    <Key>
+      <PropertyRef Name="YorumlarID" />
+    </Key>
+    <Property Name="YorumlarID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YorumBaslik" Type="nvarchar" MaxLength="50" />
+    <Property Name="Yorumicerik" Type="nvarchar(max)" />
+    <Property Name="YorumTarihi" Type="date" />
+    <Property Name="UyeID" Type="int" />
+    <Property Name="BegenmeSayisi" Type="int" />
+    <Property Name="MakaleID" Type="int" />
+    <Property Name="Aktifmi" Type="bit" />
+    <Property Name="GuncellemeTarihi" Type="date" />
+  </EntityType>
+  <EntityContainer Name="Bloghi304DBModelStoreContainer">
+    <EntitySet Name="Etiketler" EntityType="Self.Etiketler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kategoriler" EntityType="Self.Kategoriler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MakaleEtiketleri" EntityType="Self.MakaleEtiketleri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Makaleler" EntityType="Self.Makaleler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Resimler" EntityType="Self.Resimler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Uyeler" EntityType="Self.Uyeler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Yetkiler" EntityType="Self.Yetkiler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Yorumlar" EntityType="Self.Yorumlar" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
